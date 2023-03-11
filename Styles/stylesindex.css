@@ -1,0 +1,293 @@
+/* on récupère la police  */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&display=swap');
+
+html {
+    /* utiliser scroll-behavior: smooth pour avoir un effet de défilement fluide */
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: 'Lobster', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ******************************* NAVBAR ******************************* */
+
+nav {
+    overflow: hidden;
+    background-color: #f3f6c7;
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+}
+
+header li {
+    float: right;
+    font-size: 1.2em;    
+}
+
+header li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 16px; 
+}
+
+#logo {
+    font-family: 'dancing script', cursive; 
+    float: left;
+    font-weight: bold;
+}
+
+/* ******************************* Image principal ******************************* */
+
+#imagePrincipale {
+    padding-top: 60px;
+    background: url(../Images/manger.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 799px;
+}
+
+h1{
+    font-family: 'dancing script', cursive;
+    text-align: center;
+    color: antiquewhite;
+    font-size: 8em;
+    margin-top: 200px;
+    /* utiliser un site text shadow generator pour savoir quels arguments mettre selon le résulat voulu */
+    text-shadow: 10px 5px 2px black;
+}
+
+#premierTrait {
+    height: 1px;
+    width: 25%;
+    /* premier argument haut et bas  deuxieme les cotés  */
+    /* utiliser CTRL + : pour commenter une ligne */
+    margin: -3px auto;
+    background-color: #fffae1;
+    /* le trait n'est pas du text donc text shadow ne marche pas c'est une box */
+    box-shadow: 10px 5px 2px black;
+}
+
+h3 {
+    text-align: center;
+    color: antiquewhite;
+    font-size: 5em;
+    text-shadow: 10px 5px 2px black;
+}
+
+/* ******************************* Section 1 ******************************* */
+
+#presentation {
+    background-color: #fffae1;
+    /* lorsque qu'on a 4 arguments l'ordre est celui d'une aiguille d'une montre */
+    padding: 10px 0px 100px 0px;
+}
+
+#TextIntro {
+    padding: 0px 20%;
+}
+
+#prestations{
+    /* pour avoir les images allignées utiliser display: flex */
+    display: flex;
+    /* utiliser flex-wrap: wrap pour que les images se mettent en dessous si elles ne rentrent pas sur la ligne */
+    flex-wrap: wrap;
+    /* utiliser justify-content: space-between pour que les images soient espacées */
+    justify-content: space-between;
+    padding: 30px 10%;
+}
+
+.imagesPrestations h4 {
+    /*utiliser font weight pour changer l'épaisseur de la police */
+    font-family: 'dancing script', cursive;
+    text-align: center;
+    font-size: 1.8em;
+    /* avec un seul argument cela s'applique dans tous les cotés    */
+    margin: 15px;
+    font-weight: 300;
+}
+
+.imagesPrestations img {
+    width: 400px;
+    height: 400px;
+    /* utiliser border-radius pour arrondir les coins */
+    border-radius: 10px;
+    /* utiliser rgba pour avoir une couleur avec de la transparence le dernier argument est l'oppacité */
+    box-shadow: 3px 4px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* utiliser img:hover pour avoir un effet quand on passe la souris sur l'image */
+.imagesPrestations img:hover{
+    opacity: 0.7;
+    /* utiliser transform: scale pour agrandir l'image */
+    transform: scale(1.05);
+    /* utiliser transition pour avoir un effet de transition */
+    transition: 0.8s ease-in-out;
+}
+
+/* ******************************* Tant à découvrir ******************************* */
+
+#Decouvrir {
+    height: 1400px;
+    background-color: #f1f2f6;
+    padding: 1px 2%;
+}
+
+#Decouvrir h2 {
+    padding-top: 60px;
+}
+
+#manti {
+    background: url(../Images/manti.jpg);
+}
+
+#iskender {
+    background: url(../Images/iskender.jpg);
+}
+
+#pidelikofte {
+    background: url(../Images/pidelikofte.jpg);
+}
+
+#Doner {
+    background: url(../Images/doner.jpg);
+}
+
+#Decouvrir li {
+    margin: 65px 100px 0 100px;
+    height: 250px;
+    width: 55%;
+    max-width: 450px;
+    float: left;
+    box-shadow: 6px 6px 28px -1px rgba(0, 0, 0, 0.75);
+}
+
+#Decouvrir p {
+    height: 45px;
+    width: 235px;
+    background-color: #fce0ac;
+    float: right;
+    margin: 50px -180px 0 0;
+    font-size: 1.5em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 0px 1px rgba(207, 189, 150, 0.897);
+}
+
+#Decouvrir #iskender, #Decouvrir #Doner {
+    float: right;
+}
+
+#iskender p, #Doner p {
+    float: left;
+    background-color: burlywood;
+    margin-left: -180px;
+    box-shadow: -4px 4px 0px 1px rgba(207, 189, 150, 0.897);
+}
+
+/* ******************************* Footer ******************************* */
+
+footer {
+    background-color: #524a3a;
+    color: #fffae1;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+
+form {
+    /* pas d'espace entre les éléments et les cotés sont auto  */
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+input, textarea, button{
+    border:none;
+    width: 55%;
+    padding: 15px 10px;
+    /* espace entre les box */
+    margin: 1px 0;
+    font-size: 1.2em;
+    font-family: 'Lobster', sans-serif;
+    border-radius: 8px;
+}
+
+textarea{
+    height: 200px;
+}
+
+button{
+    font-size: 1.5em;
+    background-color: #fffae1;
+}
+
+button:hover{
+    background-color: #78e539;
+    color: #fffae1;
+    /* indiquer que c'est un bouton en changeant l'apparence de la souris */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+#deuxiemeTrait {
+    height: 1px;
+    width: 75%;
+    background-color: #fffae1;
+    margin: 60px auto;
+}
+
+#copyrightandIcons{
+    /* utiliser flex pour aligner les éléments */
+    display: flex;
+    margin-bottom: 20px;
+    padding: 0 10%;
+}
+
+#copyright{
+    width: 50%;
+    text-align: left;
+    color: #fffae1;
+}
+
+#icons{
+    width: 50%;
+    /* utiliser justify-content: flex-end pour aligner les éléments à droite */
+    text-align: right;
+}
+
+#icons a{
+    /* pour être sure que les liens ne se superposent pas */
+    display: inline-block;
+    /* utilisr padding au lieu de margin pour ne pas que les liens se superposent */
+    padding: 0 15px;
+    font-size: 1.3em;
+    color: #fffae1;
+}
+
+#icons a:hover{
+    transform: scale(1.5);
+    transition: 0.1s;
+}
