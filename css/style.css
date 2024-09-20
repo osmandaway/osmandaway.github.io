@@ -792,19 +792,23 @@ a {
     grid-gap: 0px; /* Pas d'espace entre les images */
 }
 
-/* Tablettes et petits écrans */
-@media (max-width: 991px) {
-  .portfolio-section .grid {
-      grid-template-columns: repeat(2, 1fr); /* Deux colonnes pour les tablettes */
+/* Pour les petits écrans comme les téléphones */
+@media (max-width: 767px) {
+  .navbar-logo {
+      width: 40px; /* Réduire la taille du logo sur mobile */
+      margin-left: 10px; /* Ajouter une marge pour éviter que le logo touche le bord gauche */
+  }
+
+  .img-fluid {
+      max-width: 100%; /* Assure que les images ne dépassent pas la largeur de l'écran */
+      height: auto;
+  }
+
+  .navbar-toggler {
+      margin-right: 10px; /* Ajuste la position du bouton hamburger sur mobile */
   }
 }
 
-/* Téléphones */
-@media (max-width: 767px) {
-  .portfolio-section .grid {
-      grid-template-columns: repeat(1, 1fr); /* Une seule colonne pour les téléphones */
-  }
-}
 
 /* Centrer le logo */
 #chat{
@@ -866,4 +870,11 @@ html {
 .rezzz{
   color: #fff;
   font-weight: bolder;
+}
+
+.container {
+  width: 100%;
+  padding: 0 15px; /* Ajouter du padding interne pour éviter que le contenu touche les bords */
+  margin: 0 auto; /* Centrer le conteneur */
+  box-sizing: border-box; /* Inclut les paddings dans la largeur */
 }
